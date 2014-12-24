@@ -1,0 +1,17 @@
+block content
+	h1 Mis Tareas
+	p
+		a(href='/tareas/nueva', class='btn primary') Agregar nueva tarea
+	-if(docs.length)
+		table
+			tr
+				th Tarea
+					each tarea in docs
+						tr
+							td #{tarea.nombre}
+							td
+								a.btn( href='/tareas/#{tarea.id}/editar') Editar tarea
+							td
+								a.btn( href='/tareas/#{tarea.id}') Eliminar
+	-else
+		p No tienes ninguna tarea

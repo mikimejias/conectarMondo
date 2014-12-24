@@ -1,0 +1,12 @@
+block content
+	h1 Vista Nueva Tarea
+	form(method='post', action='/tareas')
+		fieldset
+			legend Añadir una tarea Nueva
+			div.clearfix
+				label Tarea
+				div.input
+					input(name='tarea', class='xlarge')
+			div.actions
+				input(type='submit', value='Guardar', class='btn primary')
+				button(type='reset', class='btn') Cancelar
